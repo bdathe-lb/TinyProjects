@@ -11,6 +11,6 @@ void Food::GenerateRandomPos() {
   pos_.y = dist_y_(rng_);
 }
 
-Pos Food::GetFoodPos() {
+Pos Food::GetFoodPos() const {
   return pos_;
 }

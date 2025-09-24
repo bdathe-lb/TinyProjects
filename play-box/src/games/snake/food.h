@@ -15,8 +15,12 @@ private:
 
 public:
   Food(int max_x, int max_y);
+  
+public:
+  // 给食物随机生成一个位置
   void GenerateRandomPos();
-  Pos GetFoodPos();
+  // 获取食物的位置
+  Pos GetFoodPos() const;
 };
 
 #endif  // __FOOD_H__

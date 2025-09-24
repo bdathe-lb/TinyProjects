@@ -158,10 +158,11 @@ bool compress(char *input_filename, char *output_filename, bool keep) {
   fclose(out);
   free_huffman_tree(root);
   free_huffman_codes(codes);
-  if (out_malloced) { free(output_filename); }
   
   /// 计算压缩比
   compute_compression_ratio(input_filename, output_filename);
+
+  if (out_malloced) { free(output_filename); }
 
   /// 判断是否保留原文件
   if (!keep) {
